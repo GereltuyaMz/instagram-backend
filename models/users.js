@@ -11,6 +11,10 @@ const userSchema = new Schema({
 		lowercase: true,
 		validate: [isEmail, "invalid email"],
 	},
+	password: {
+		type: String,
+		required: true,
+	},
 	createAt: { type: Date, default: Date.now },
 	lastLogin: { type: Date },
 });
